@@ -1,75 +1,82 @@
 <?php
 /**
-* Основные параметры WordPress.
-*
-* Скрипт для создания wp-config.php использует этот файл в процессе
-* установки. Необязательно использовать веб-интерфейс, можно
-* скопировать файл в "wp-config.php" и заполнить значения вручную.
-*
-* Этот файл содержит следующие параметры:
-*
-* * Настройки MySQL
-* * Секретные ключи
-* * Префикс таблиц базы данных
-* * ABSPATH
-*
-* @link https://codex.wordpress.org/Editing_wp-config.php
-*
-* @package WordPress
-*/
-// ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
-/** Имя базы данных для WordPress */
-define('DB_NAME', 'wordpress');
-/** Имя пользователя MySQL */
-define('DB_USER', 'root');
-/** Пароль к базе данных MySQL */
-define('DB_PASSWORD', '');
-/** Имя сервера MySQL */
-define('DB_HOST', '');
-/** Кодировка базы данных для создания таблиц. */
-define('DB_CHARSET', 'utf8mb4');
-/** Схема сопоставления. Не меняйте, если не уверены. */
+ * Configuración básica de WordPress.
+ *
+ * Este archivo contiene las siguientes configuraciones: ajustes de MySQL, prefijo de tablas,
+ * claves secretas, idioma de WordPress y ABSPATH. Para obtener más información,
+ * visita la página del Codex{@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} . Los ajustes de MySQL te los proporcionará tu proveedor de alojamiento web.
+ *
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
+ *
+ * @package WordPress
+ */
+
+// ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
+/** El nombre de tu base de datos de WordPress */
+define( 'DB_NAME', 'wordpress' );
+
+/** Tu nombre de usuario de MySQL */
+define( 'DB_USER', 'root' );
+
+/** Tu contraseña de MySQL */
+define( 'DB_PASSWORD', '' );
+
+/** Host de MySQL (es muy probable que no necesites cambiarlo) */
+define( 'DB_HOST', 'localhost' );
+
+/** Codificación de caracteres para la base de datos. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
+
 /**#@+
-* Уникальные ключи и соли для аутентификации.
-*
-* Смените значение каждой константы на уникальную фразу.
-* Можно сгенерировать их с помощью {@link https://api.wordpress.org/secret-key/1.1/salt/ сервиса ключей на WordPress.org}
-* Можно изменить их, чтобы сделать существующие файлы cookies недействительными. Пользователям потребуется авторизоваться снова.
-*
-* @since 2.6.0
-*/
-define('AUTH_KEY', '57dRKpmK7YRWpoyRGPffuc+fKuetiPouoDil05FORr28S4DHIq6b/dSNiYzALTvP');
-define('SECURE_AUTH_KEY', 'vY/cDrJSy44zgVoo093XNwuj+bEFbtXsK4VzZFl0t6DHep2jrETZrL/ITnDuZIfM');
-define('LOGGED_IN_KEY', 'n9AYaDf0eO4yK3TkMjkUT4wYetlt5XqodK3Hmv1eItK6kxkBNhK+x2t8+hN+hiwG');
-define('NONCE_KEY', 'dHTgqUZ0OPTP1mtrALj+cyVtKijs4SiIOQRYd55ErSr5ivSR9LzFrtOJP5jOjwUB');
-define('AUTH_SALT', '1NO9/Pw9DhdnuiwOgQ1GLQNOt1azzrF03w6zEB9RdwPgRoEduC1OxeqNk7Lo42ds');
-define('SECURE_AUTH_SALT', 'Dl1E18cWliTnTMjktQY5Eqb5wL0y3Hu1mC2MsagdiuX04VpSsufNgv5jlKXRqHWE');
-define('LOGGED_IN_SALT', '2Pay8KzoY9STChG8GH7X4vkpHuoY47T2TzzMvCfysoCPutZdNb4tMVs+cIzp8UAw');
-define('NONCE_SALT', 'DvSPt0E9qDJn76QoA1XZPx32ZccNApL8d8J5/0pE6rOTyor480NHX9OcpwD/58uG');
+ * Claves únicas de autentificación.
+ *
+ * Define cada clave secreta con una frase aleatoria distinta.
+ * Puedes generarlas usando el {@link https://api.wordpress.org/secret-key/1.1/salt/ servicio de claves secretas de WordPress}
+ * Puedes cambiar las claves en cualquier momento para invalidar todas las cookies existentes. Esto forzará a todos los usuarios a volver a hacer login.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY', '_OQ~&FIs.5GgY/.4.&6uQ|O~Tp`c+FR|wDL7w%)Y5w[.E|X(,}F.aK]SK`[F`9+2' );
+define( 'SECURE_AUTH_KEY', 'U<];]GZ:>&CYK=(Zmnk95q$&d.=8cHX+tcDCMQ1SivrEB.Z}67NnSZ0(p+-?}N2$' );
+define( 'LOGGED_IN_KEY', 'OYQUP&RJ/PGLxROn&($l_Z,).Q?GqsP4<<J_FLcvQyqAk[7nA4RCeRh8^s8+>:S*' );
+define( 'NONCE_KEY', '&$w9`=6oXV6w^U^H,{wm>j=}]25}E.hSO>w2r,kgW ~+x%67U@_=FUkqZn,_2o>K' );
+define( 'AUTH_SALT', '91NMfOL)xMVrw[RrCVm gddba!P5,N)VG_}2MNBb[8K7ZQGL|6K[I+u_#Vp%b8,[' );
+define( 'SECURE_AUTH_SALT', '::}4RJ|Ei/IlDp>(A!C]H|%-J<u*aVUyS# HO$M[O|s]J?R[3@yi4=nsi,#4UcB)' );
+define( 'LOGGED_IN_SALT', ']tAYaj~4tT:qzaT_nQC_wty=sz1}wBi:lRcp~>+59/:c;*hYn<^Qhq,i|lsNIdyj' );
+define( 'NONCE_SALT', 'd`8t,li69*CZ5kwD{+i?W2<#@Qy-z)V:G30 Xm~26o6e2qp4x CM_`qToE49SOFT' );
+
 /**#@-*/
+
 /**
-* Префикс таблиц в базе данных WordPress.
-*
-* Можно установить несколько сайтов в одну базу данных, если использовать
-* разные префиксы. Пожалуйста, указывайте только цифры, буквы и знак подчеркивания.
-*/
-$table_prefix = 'se34fh_';
+ * Prefijo de la base de datos de WordPress.
+ *
+ * Cambia el prefijo si deseas instalar multiples blogs en una sola base de datos.
+ * Emplea solo números, letras y guión bajo.
+ */
+$table_prefix = 'wp_';
+
+
 /**
-* Для разработчиков: Режим отладки WordPress.
-*
-* Измените это значение на true, чтобы включить отображение уведомлений при разработке.
-* Разработчикам плагинов и тем настоятельно рекомендуется использовать WP_DEBUG
-* в своём рабочем окружении.
-*
-* Информацию о других отладочных константах можно найти в Кодексе.
-*
-* @link https://codex.wordpress.org/Debugging_in_WordPress
-*/
+ * Para desarrolladores: modo debug de WordPress.
+ *
+ * Cambia esto a true para activar la muestra de avisos durante el desarrollo.
+ * Se recomienda encarecidamente a los desarrolladores de temas y plugins que usen WP_DEBUG
+ * en sus entornos de desarrollo.
+ */
 define('WP_DEBUG', false);
-/* Это всё, дальше не редактируем. Успехов! */
-/** Абсолютный путь к директории WordPress. */
+
+/* ¡Eso es todo, deja de editar! Feliz blogging */
+
+/** WordPress absolute path to the Wordpress directory. */
 if ( !defined('ABSPATH') )
-define('ABSPATH', dirname(__FILE__) . '/');
-/** Инициализирует переменные WordPress и подключает файлы. */
+	define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
