@@ -19,13 +19,13 @@
 */
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define('DB_NAME', 'nemironl_wp1');
+define('DB_NAME', 'wordpress');
 /** Имя пользователя MySQL */
-define('DB_USER', 'nemironl_wp1');
+define('DB_USER', 'root');
 /** Пароль к базе данных MySQL */
-define('DB_PASSWORD', 'Bvl1kGtrd');
+define('DB_PASSWORD', '');
 /** Имя сервера MySQL */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '');
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8mb4');
 /** Схема сопоставления. Не меняйте, если не уверены. */
@@ -39,14 +39,14 @@ define('DB_COLLATE', '');
 *
 * @since 2.6.0
 */
-define('AUTH_KEY',         '^+%QzsOQPx,p5=rfY()z+KhC%So;3]SV/t6{BJ%3Si@ld7{E>}.Z0zCU<24)~HC`');
-define('SECURE_AUTH_KEY',  '5vY~H.HGz{RsDKS~n(dGLCU+j{GT2tZ+Kxls$CEDCyN(y,;C7:+~2?3Dvt|!?Rxh');
-define('LOGGED_IN_KEY',    '~u(S*LG~Gc&0kjqi#NQ>v(3ymZ`83b3mxHCIW!hTTD@K,(|qqcr;.f^HNgys qcy');
-define('NONCE_KEY',        '%d4ISu?t`rgu8${x>]OlCdh_Is/I#7EBbNxE]:WK7Y{?Bp3q`W5HU4CXXd! MpHt');
-define('AUTH_SALT',        'T{uSi[|B>,Vz=7g@y/ZjNC:~e])N%M$M`CK-#pxkWX3M B=YH%a,J.}rF9LMs*s@');
-define('SECURE_AUTH_SALT', 'zO`b^T7dC 3:]RkE0wcbIfrIE9{#H=&cX&$!5{m7zLd4?bYII|=+p6<*sFZU!xE.');
-define('LOGGED_IN_SALT',   'N1JFj]Bw!wG!@Z5PqnA1!P}cqcfg-Dbgg8!`$2}eIX p~*?/S7y&`|P,Nrs$XWWK');
-define('NONCE_SALT',       '!ZHXn4tZq 9/E6R$MgHLk?0a#j/GTXu B&p@OI<Q|T^Q=J=_Lp{fE@*RfnXLu Co');
+define('AUTH_KEY', '57dRKpmK7YRWpoyRGPffuc+fKuetiPouoDil05FORr28S4DHIq6b/dSNiYzALTvP');
+define('SECURE_AUTH_KEY', 'vY/cDrJSy44zgVoo093XNwuj+bEFbtXsK4VzZFl0t6DHep2jrETZrL/ITnDuZIfM');
+define('LOGGED_IN_KEY', 'n9AYaDf0eO4yK3TkMjkUT4wYetlt5XqodK3Hmv1eItK6kxkBNhK+x2t8+hN+hiwG');
+define('NONCE_KEY', 'dHTgqUZ0OPTP1mtrALj+cyVtKijs4SiIOQRYd55ErSr5ivSR9LzFrtOJP5jOjwUB');
+define('AUTH_SALT', '1NO9/Pw9DhdnuiwOgQ1GLQNOt1azzrF03w6zEB9RdwPgRoEduC1OxeqNk7Lo42ds');
+define('SECURE_AUTH_SALT', 'Dl1E18cWliTnTMjktQY5Eqb5wL0y3Hu1mC2MsagdiuX04VpSsufNgv5jlKXRqHWE');
+define('LOGGED_IN_SALT', '2Pay8KzoY9STChG8GH7X4vkpHuoY47T2TzzMvCfysoCPutZdNb4tMVs+cIzp8UAw');
+define('NONCE_SALT', 'DvSPt0E9qDJn76QoA1XZPx32ZccNApL8d8J5/0pE6rOTyor480NHX9OcpwD/58uG');
 /**#@-*/
 /**
 * Префикс таблиц в базе данных WordPress.
@@ -54,14 +54,14 @@ define('NONCE_SALT',       '!ZHXn4tZq 9/E6R$MgHLk?0a#j/GTXu B&p@OI<Q|T^Q=J=_Lp{f
 * Можно установить несколько сайтов в одну базу данных, если использовать
 * разные префиксы. Пожалуйста, указывайте только цифры, буквы и знак подчеркивания.
 */
-$table_prefix  = 'se34fh_';
+$table_prefix = 'se34fh_';
 /**
 * Для разработчиков: Режим отладки WordPress.
 *
 * Измените это значение на true, чтобы включить отображение уведомлений при разработке.
 * Разработчикам плагинов и тем настоятельно рекомендуется использовать WP_DEBUG
 * в своём рабочем окружении.
-* 
+*
 * Информацию о других отладочных константах можно найти в Кодексе.
 *
 * @link https://codex.wordpress.org/Debugging_in_WordPress
